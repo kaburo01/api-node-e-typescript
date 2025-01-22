@@ -1,11 +1,9 @@
-import express from "express";
+import express, { Request, Response } from "express";
 
 const server = express();
 
-server.get("/", (req: any, res: any) => {
-
-   res.send("Hello World!");
-
+server.get("/", (req: Request, res: Response) => {
+  res.send("Hello World!");
 });
 
 export { server };
